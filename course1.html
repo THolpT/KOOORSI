@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Document</title>
+</head>
+<body id="blur">
+    <header>
+        <div class="logo">VertumIT</div>
+        <ul class="nav-menu">
+            <li class="nav-li">Главная</li>
+            <li class="nav-li">Курсы</li>
+            <button onclick="modalActivate()">Регистрация</button>
+        </ul>
+    </header>
+<!-- Первая модалка для регистрации -->
+<section class="modal-menu modal-invis" id="modal-reg">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Регистрация</label>
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <input type="tel" placeholder="Телефон">
+        <button class="reg-btn">Регистрация</button>
+        <p class="login-link" onclick="toggleModal()">Уже имеете аккаунт?</p>
+    </form>
+</section>
+
+<!-- Вторая модалка для авторизации -->
+<section class="modal-menu modal-invis" id="modal-login">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Авторизация</label>
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <button class="reg-btn">Войти</button>
+        <p class="login-link" onclick="toggleModal()">Создать аккаунт</p>
+    </form>
+</section>
+
+    <main>
+        <section class="main-page-section">
+            <div class="left-main">
+                <h1 class="main-title">Frontend</h1>
+                <p class="main-descr">Инженеры фронтенда тесно сотрудничают с дизайнерами, чтобы сделать веб-сайты красивыми, функциональными и быстрыми.</p>
+                <p class="main-descr2">Включает HTML, CSS, JavaScript, фронтенд, веб-приложения, React и многое другое.</p>
+            </div>
+            <img src="img/фффффффф 1.png" alt="" class="right-main-img">
+        </section>
+        <section class="courses-content">
+            <h2>Введение во фронтенд-разработку</h2>
+
+<h3>Что такое фронтенд-разработка?</h3>
+<p>Фронтенд-разработка — это процесс создания и оптимизации пользовательского интерфейса веб-приложений. Она включает в себя все, что пользователь видит и с чем взаимодействует на веб-странице. Основная цель фронтенд-разработки — обеспечить удобный, интуитивно понятный и привлекательный интерфейс, который позволит пользователям легко выполнять необходимые действия.</p>
+
+<h3>Обзор роли фронтенд-разработчика</h3>
+<p>Фронтенд-разработчик — это специалист, который занимается созданием клиентской части веб-приложений. Его задачи включают:</p>
+<ul>
+    <li>Разработка и поддержка пользовательского интерфейса.</li>
+    <li>Обеспечение кроссбраузерной совместимости.</li>
+    <li>Оптимизация производительности и скорости загрузки страниц.</li>
+    <li>Взаимодействие с дизайнерами для реализации визуальных элементов.</li>
+    <li>Взаимодействие с бэкенд-разработчиками для интеграции с серверной частью.</li>
+</ul>
+
+<h3>Различия между фронтенд и бэкенд</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Фронтенд</th>
+            <th>Бэкенд</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Отвечает за взаимодействие с пользователем.</td>
+            <td>Отвечает за логику приложения, работу с базами данных и серверами.</td>
+        </tr>
+        <tr>
+            <td>Включает HTML, CSS и JavaScript.</td>
+            <td>Включает серверные языки программирования, такие как Python, Ruby, Java и другие.</td>
+        </tr>
+        <tr>
+            <td>Работает в браузере пользователя.</td>
+            <td>Работает на сервере и обрабатывает данные, которые затем передаются на фронтенд.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Основы веб-технологий</h3>
+<p>Веб-технологии включают в себя несколько ключевых компонентов:</p>
+<ul>
+    <li><strong>HTML (HyperText Markup Language)</strong>: Язык разметки для создания структуры веб-страниц.</li>
+    <li><strong>CSS (Cascading Style Sheets)</strong>: Язык стилей для оформления веб-страниц.</li>
+    <li><strong>JavaScript</strong>: Язык программирования для добавления интерактивности на веб-страницы.</li>
+</ul>
+
+<h3>История и эволюция веба</h3>
+<ul>
+    <li><strong>1990-е:</strong> Создание первых веб-страниц с использованием HTML.</li>
+    <li><strong>2000-е:</strong> Развитие CSS и JavaScript, появление первых фреймворков.</li>
+    <li><strong>2010-е:</strong> Внедрение HTML5, CSS3, появление SPA (Single Page Applications) и мобильных приложений.</li>
+    <li><strong>Современность:</strong> Развитие прогрессивных веб-приложений (PWA), использование современных фреймворков и библиотек, таких как React, Angular и Vue.js.</li>
+</ul>
+
+<h3>Основные понятия: браузеры, серверы, протоколы</h3>
+<ul>
+    <li><strong>Браузеры:</strong> Программы для просмотра веб-страниц (например, Chrome, Firefox, Safari).</li>
+    <li><strong>Серверы:</strong> Компьютеры или программы, которые хранят и обрабатывают данные, предоставляя их по запросу клиентам.</li>
+    <li><strong>Протоколы:</strong> Правила и стандарты для передачи данных между клиентом и сервером (например, HTTP/HTTPS).</li>
+</ul>
+
+<p>Эти основы помогут вам начать понимать, как работает веб и какие технологии используются для создания современных веб-приложений.</p>
+
+    </section>
+    </main>
+    <footer>
+        <h1 class="footer-logo">VertumIT</h1>
+        <button class="footer-sup">Поддержать нас</button>
+        <p class="soc-title">Подпишитесь на нас</p>
+        <div class="soc-imgs">
+            <img src="img/tg.png" alt="" class="soc">
+            <img src="img/vk.png" alt="" class="soc">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

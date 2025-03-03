@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Document</title>
+</head>
+<body id="blur">
+    <header>
+        <div class="logo">VertumIT</div>
+        <ul class="nav-menu">
+            <li class="nav-li">Главная</li>
+            <li class="nav-li">Курсы</li>
+            <button onclick="modalActivate()">Регистрация</button>
+        </ul>
+    </header>
+<!-- Первая модалка для регистрации -->
+<section class="modal-menu modal-invis" id="modal-reg">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Регистрация</label>
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <input type="tel" placeholder="Телефон">
+        <button class="reg-btn">Регистрация</button>
+        <p class="login-link" onclick="toggleModal()">Уже имеете аккаунт?</p>
+    </form>
+</section>
+
+<!-- Вторая модалка для авторизации -->
+<section class="modal-menu modal-invis" id="modal-login">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Авторизация</label>
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <button class="reg-btn">Войти</button>
+        <p class="login-link" onclick="toggleModal()">Создать аккаунт</p>
+    </form>
+</section>
+
+    <main>
+        <section class="main-page-section">
+            <div class="left-main">
+                <h1 class="main-title">Frontend</h1>
+                <p class="main-descr">Инженеры фронтенда тесно сотрудничают с дизайнерами, чтобы сделать веб-сайты красивыми, функциональными и быстрыми.</p>
+                <p class="main-descr2">Включает HTML, CSS, JavaScript, фронтенд, веб-приложения, React и многое другое.</p>
+            </div>
+            <img src="img/фффффффф 1.png" alt="" class="right-main-img">
+        </section>
+        <section class="courses-content">
+            <h2>Продвинутый JavaScript</h2>
+
+<p>JavaScript предоставляет множество возможностей для создания сложных и интерактивных веб-приложений. Продвинутые темы включают асинхронное программирование, работу с данными и взаимодействие с сервером.</p>
+
+<h3>Асинхронное программирование</h3>
+<p>Асинхронное программирование позволяет выполнять задачи, которые могут занять время (например, запросы к серверу), не блокируя основной поток выполнения.</p>
+
+<h4>Промисы</h4>
+<p>Промисы — это объект, представляющий результат асинхронной операции. Они могут находиться в одном из трех состояний:</p>
+<ul>
+    <li><strong>pending</strong> (ожидание)</li>
+    <li><strong>fulfilled</strong> (выполнено)</li>
+    <li><strong>rejected</strong> (отклонено)</li>
+</ul>
+
+<p><strong>Пример использования промиса:</strong></p>
+
+<pre><code>
+let promise = new Promise((resolve, reject) => {
+    let success = true;
+    if (success) {
+        resolve("Операция выполнена успешно!");
+    } else {
+        reject("Ошибка при выполнении операции.");
+    }
+});
+
+promise
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+</code></pre>
+
+<h4>Async/Await</h4>
+<p><code>async</code> и <code>await</code> упрощают работу с промисами. Ключевое слово <code>async</code> используется для объявления асинхронной функции, а <code>await</code> — для ожидания выполнения промиса.</p>
+
+<p><strong>Пример использования <code>async/await</code>:</strong></p>
+
+<pre><code>
+async function fetchData() {
+    try {
+        let response = await fetch('https://api.example.com/data');
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error("Ошибка:", error);
+    }
+}
+
+fetchData();
+</code></pre>
+
+<h3>Работа с таймерами</h3>
+<p>Таймеры позволяют выполнять код с задержкой или через регулярные интервалы времени.</p>
+
+<h4>setTimeout</h4>
+<p>Выполняет функцию один раз после заданного времени.</p>
+
+<pre><code>
+setTimeout(() => {
+    console.log("Это сообщение выводится через 2 секунды.");
+}, 2000);
+</code></pre>
+
+<h4>setInterval</h4>
+<p>Выполняет функцию регулярно через указанные интервалы времени.</p>
+
+<pre><code>
+setInterval(() => {
+    console.log("Это сообщение выводится каждые 2 секунды.");
+}, 2000);
+</code></pre>
+
+<h3>Работа с данными</h3>
+<p>JavaScript поддерживает работу с различными форматами данных, включая JSON.</p>
+
+<h4>JSON (JavaScript Object Notation)</h4>
+<p>JSON — легкий формат обмена данными, который легко читается и пишется человеком, а также легко парсится и генерируется машинами.</p>
+
+<p><strong>Пример JSON:</strong></p>
+
+<pre><code>
+{
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+</code></pre>
+
+<h4>Работа с JSON в JavaScript</h4>
+
+<pre><code>
+let jsonString = '{"name": "John", "age": 30, "city": "New York"}';
+let jsonObject = JSON.parse(jsonString);
+console.log(jsonObject.name); // John
+
+let newJsonString = JSON.stringify(jsonObject);
+console.log(newJsonString);
+</code></pre>
+
+<h3>Введение в AJAX и Fetch API</h3>
+<p>AJAX (Asynchronous JavaScript and XML) позволяет обновлять части веб-страницы без перезагрузки. <code>Fetch API</code> — современный способ выполнения сетевых запросов.</p>
+
+<h4>Fetch API</h4>
+<p>Используется для выполнения HTTP-запросов. Возвращает промис, который разрешается в ответ.</p>
+
+<p><strong>Пример использования Fetch API:</strong></p>
+
+<pre><code>
+fetch('https://api.example.com/data')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => console.log(data))
+    .catch(error => console.error('Ошибка:', error));
+</code></pre>
+
+<p>Эти темы помогут вам создавать более сложные и интерактивные веб-приложения, эффективно управляя асинхронными операциями и взаимодействуя с сервером.</p>
+
+    </section>
+    </main>
+    <footer>
+        <h1 class="footer-logo">VertumIT</h1>
+        <button class="footer-sup">Поддержать нас</button>
+        <p class="soc-title">Подпишитесь на нас</p>
+        <div class="soc-imgs">
+            <img src="img/tg.png" alt="" class="soc">
+            <img src="img/vk.png" alt="" class="soc">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Document</title>
+</head>
+<body id="blur">
+    <header>
+        <div class="logo">VertumIT</div>
+        <ul class="nav-menu">
+            <li class="nav-li">Главная</li>
+            <li class="nav-li">Курсы</li>
+            <button onclick="modalActivate()">Регистрация</button>
+        </ul>
+    </header>
+<!-- Первая модалка для регистрации -->
+<section class="modal-menu modal-invis" id="modal-reg">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Регистрация</label>
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <input type="tel" placeholder="Телефон">
+        <button class="reg-btn">Регистрация</button>
+        <p class="login-link" onclick="toggleModal()">Уже имеете аккаунт?</p>
+    </form>
+</section>
+
+<!-- Вторая модалка для авторизации -->
+<section class="modal-menu modal-invis" id="modal-login">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Авторизация</label>
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <button class="reg-btn">Войти</button>
+        <p class="login-link" onclick="toggleModal()">Создать аккаунт</p>
+    </form>
+</section>
+
+    <main>
+        <section class="main-page-section">
+            <div class="left-main">
+                <h1 class="main-title">Frontend</h1>
+                <p class="main-descr">Инженеры фронтенда тесно сотрудничают с дизайнерами, чтобы сделать веб-сайты красивыми, функциональными и быстрыми.</p>
+                <p class="main-descr2">Включает HTML, CSS, JavaScript, фронтенд, веб-приложения, React и многое другое.</p>
+            </div>
+            <img src="img/фффффффф 1.png" alt="" class="right-main-img">
+        </section>
+        <section class="courses-content">
+            <h2>JavaScript для начинающих</h2>
+
+<p><strong>JavaScript</strong> — это язык программирования, который используется для добавления интерактивности на веб-страницы. Он работает на клиентской стороне в браузере и позволяет создавать динамические веб-приложения.</p>
+
+<h3>Основы JavaScript</h3>
+<p>JavaScript является интерпретируемым языком программирования, который поддерживается всеми современными браузерами. Он позволяет манипулировать HTML и CSS, обрабатывать события, отправлять запросы к серверу и многое другое.</p>
+
+<h3>Введение в язык программирования</h3>
+<p>JavaScript был создан для работы в браузере, но также может использоваться на сервере (например, с помощью <strong>Node.js</strong>). Он поддерживает парадигмы объектно-ориентированного, функционального и императивного программирования.</p>
+
+<h3>Переменные, типы данных, операторы</h3>
+
+<h4>Переменные:</h4>
+<p>Используются для хранения данных. Объявляются с помощью ключевых слов <code>let</code>, <code>const</code> или <code>var</code>.</p>
+
+<pre><code>
+let name = "John";
+const age = 30;
+</code></pre>
+
+<h4>Типы данных:</h4>
+<ul>
+    <li><strong>Примитивные типы:</strong> <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, <code>bigint</code>.</li>
+    <li><strong>Объекты:</strong> Комплексные структуры данных, включая массивы и функции.</li>
+</ul>
+
+<h4>Операторы:</h4>
+<ul>
+    <li><strong>Арифметические:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>.</li>
+    <li><strong>Операторы сравнения:</strong> <code>==</code>, <code>===</code>, <code>!=</code>, <code>!==</code>, <code>></code>, <code><</code>.</li>
+    <li><strong>Логические:</strong> <code>&&</code>, <code>||</code>, <code>!</code>.</li>
+</ul>
+
+<h3>Управление потоком</h3>
+<p>Управление потоком позволяет контролировать выполнение кода в зависимости от условий.</p>
+
+<h4>Условные операторы:</h4>
+<p><strong>if, else if, else:</strong> Выполняют код, если условие истинно.</p>
+
+<pre><code>
+let hour = 10;
+if (hour < 12) {
+    console.log("Good morning!");
+} else {
+    console.log("Good day!");
+}
+</code></pre>
+
+<p><strong>switch:</strong> Выполняет код в зависимости от значения переменной.</p>
+
+<pre><code>
+let day = 3;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    default:
+        console.log("Other day");
+}
+</code></pre>
+
+<h4>Циклы:</h4>
+
+<p><strong>for:</strong> Цикл с заданным количеством итераций.</p>
+<pre><code>
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+</code></pre>
+
+<p><strong>while:</strong> Цикл, который выполняется, пока условие истинно.</p>
+<pre><code>
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+</code></pre>
+
+<h3>Функции и события</h3>
+
+<h4>Функции:</h4>
+<p>Функции — это блоки кода, которые можно вызывать многократно.</p>
+
+<p><strong>Объявление и вызов функции:</strong></p>
+<pre><code>
+function greet(name) {
+    return "Hello, " + name;
+}
+
+console.log(greet("Alice"));
+</code></pre>
+
+<h4>Обработка событий:</h4>
+<p>JavaScript позволяет реагировать на события, такие как клики, наведение курсора и другие.</p>
+
+<p><strong>Использование <code>addEventListener</code>:</strong></p>
+<pre><code>
+document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+</code></pre>
+
+<p>Эти основы помогут вам начать работу с JavaScript, добавляя интерактивность и динамическое поведение на ваши веб-страницы.</p>
+
+    </section>
+    </main>
+    <footer>
+        <h1 class="footer-logo">VertumIT</h1>
+        <button class="footer-sup">Поддержать нас</button>
+        <p class="soc-title">Подпишитесь на нас</p>
+        <div class="soc-imgs">
+            <img src="img/tg.png" alt="" class="soc">
+            <img src="img/vk.png" alt="" class="soc">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

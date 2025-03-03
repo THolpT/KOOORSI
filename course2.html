@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Document</title>
+</head>
+<body id="blur">
+    <header>
+        <div class="logo">VertumIT</div>
+        <ul class="nav-menu">
+            <li class="nav-li">Главная</li>
+            <li class="nav-li">Курсы</li>
+            <button onclick="modalActivate()">Регистрация</button>
+        </ul>
+    </header>
+<!-- Первая модалка для регистрации -->
+<section class="modal-menu modal-invis" id="modal-reg">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Регистрация</label>
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <input type="tel" placeholder="Телефон">
+        <button class="reg-btn">Регистрация</button>
+        <p class="login-link" onclick="toggleModal()">Уже имеете аккаунт?</p>
+    </form>
+</section>
+
+<!-- Вторая модалка для авторизации -->
+<section class="modal-menu modal-invis" id="modal-login">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Авторизация</label>
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <button class="reg-btn">Войти</button>
+        <p class="login-link" onclick="toggleModal()">Создать аккаунт</p>
+    </form>
+</section>
+
+    <main>
+        <section class="main-page-section">
+            <div class="left-main">
+                <h1 class="main-title">Frontend</h1>
+                <p class="main-descr">Инженеры фронтенда тесно сотрудничают с дизайнерами, чтобы сделать веб-сайты красивыми, функциональными и быстрыми.</p>
+                <p class="main-descr2">Включает HTML, CSS, JavaScript, фронтенд, веб-приложения, React и многое другое.</p>
+            </div>
+            <img src="img/фффффффф 1.png" alt="" class="right-main-img">
+        </section>
+        <section class="courses-content">
+            <h2>Основы HTML</h2>
+
+<p><strong>HTML (HyperText Markup Language)</strong> — это стандартный язык разметки для создания веб-страниц. Он используется для определения структуры и содержания веб-документа.</p>
+
+<h3>Структура HTML-документа</h3>
+<p>Основная структура HTML-документа включает в себя следующие элементы:</p>
+
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Заголовок страницы&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Заголовок&lt;/h1&gt;
+    &lt;p&gt;Параграф текста.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<ul>
+    <li><code>&lt;!DOCTYPE html&gt;</code>: Декларация типа документа, указывающая, что это HTML5.</li>
+    <li><code>&lt;html&gt;</code>: Корневой элемент HTML-документа.</li>
+    <li><code>&lt;head&gt;</code>: Содержит метаинформацию о документе, такую как кодировка и заголовок.</li>
+    <li><code>&lt;body&gt;</code>: Содержит основное содержимое страницы, которое отображается в браузере.</li>
+</ul>
+
+<h3>Теги и элементы</h3>
+<p>HTML состоит из тегов, которые обрамляют содержимое и придают ему смысл. Теги бывают:</p>
+<ul>
+    <li><strong>Парные:</strong> Например, <code>&lt;p&gt;...&lt;/p&gt;</code> для параграфа.</li>
+    <li><strong>Одиночные:</strong> Например, <code>&lt;img&gt;</code> для изображений.</li>
+</ul>
+
+<h4>Примеры тегов:</h4>
+<ul>
+    <li><code>&lt;h1&gt;</code> до <code>&lt;h6&gt;</code>: Заголовки разных уровней.</li>
+    <li><code>&lt;p&gt;</code>: Параграф.</li>
+    <li><code>&lt;a&gt;</code>: Гиперссылка.</li>
+    <li><code>&lt;img&gt;</code>: Изображение.</li>
+</ul>
+
+<h3>Атрибуты и их значения</h3>
+<p>Атрибуты предоставляют дополнительную информацию о HTML-элементах. Они записываются внутри открывающего тега.</p>
+
+<h4>Примеры атрибутов:</h4>
+<ul>
+    <li><code>href</code> в теге <code>&lt;a&gt;</code>: Указывает адрес ссылки.</li>
+</ul>
+
+<pre><code>
+&lt;a href="https://example.com"&gt;Пример ссылки&lt;/a&gt;
+</code></pre>
+
+<ul>
+    <li><code>src</code> в теге <code>&lt;img&gt;</code>: Указывает путь к изображению.</li>
+</ul>
+
+<pre><code>
+&lt;img src="image.jpg" alt="Описание изображения"&gt;
+</code></pre>
+
+<ul>
+    <li><code>class</code> и <code>id</code>: Используются для стилизации и манипуляции элементами с помощью CSS и JavaScript.</li>
+</ul>
+
+<h3>Семантическая разметка</h3>
+<p>Семантическая разметка помогает определить значение и роль элементов на странице, что улучшает доступность и SEO.</p>
+
+<h4>Примеры семантических тегов:</h4>
+<ul>
+    <li><code>&lt;header&gt;</code>: Шапка страницы или раздела.</li>
+    <li><code>&lt;footer&gt;</code>: Подвал страницы или раздела.</li>
+    <li><code>&lt;article&gt;</code>: Самостоятельный контент, например, блог-пост.</li>
+    <li><code>&lt;section&gt;</code>: Раздел документа.</li>
+    <li><code>&lt;nav&gt;</code>: Навигационное меню.</li>
+    <li><code>&lt;aside&gt;</code>: Побочный контент, например, боковая панель.</li>
+</ul>
+
+<h3>Формы и ввод данных</h3>
+<p>HTML-формы позволяют пользователям вводить данные и отправлять их на сервер.</p>
+
+<h4>Пример формы:</h4>
+<pre><code>
+&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Имя:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+
+    &lt;input type="submit" value="Отправить"&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h4>Типы полей ввода:</h4>
+<ul>
+    <li><code>&lt;input type="text"&gt;</code>: Однострочное текстовое поле.</li>
+    <li><code>&lt;input type="email"&gt;</code>: Поле для ввода email.</li>
+    <li><code>&lt;input type="password"&gt;</code>: Поле для ввода пароля.</li>
+    <li><code>&lt;textarea&gt;</code>: Многострочное текстовое поле.</li>
+    <li><code>&lt;select&gt;</code>: Выпадающий список.</li>
+    <li><code>&lt;button&gt;</code>: Кнопка для отправки формы.</li>
+</ul>
+    </section>
+    </main>
+    <footer>
+        <h1 class="footer-logo">VertumIT</h1>
+        <button class="footer-sup">Поддержать нас</button>
+        <p class="soc-title">Подпишитесь на нас</p>
+        <div class="soc-imgs">
+            <img src="img/tg.png" alt="" class="soc">
+            <img src="img/vk.png" alt="" class="soc">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Document</title>
+</head>
+<body id="blur">
+    <header>
+        <div class="logo">VertumIT</div>
+        <ul class="nav-menu">
+            <li class="nav-li">Главная</li>
+            <li class="nav-li">Курсы</li>
+            <button onclick="modalActivate()">Регистрация</button>
+        </ul>
+    </header>
+<!-- Первая модалка для регистрации -->
+<section class="modal-menu modal-invis" id="modal-reg">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Регистрация</label>
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <input type="tel" placeholder="Телефон">
+        <button class="reg-btn">Регистрация</button>
+        <p class="login-link" onclick="toggleModal()">Уже имеете аккаунт?</p>
+    </form>
+</section>
+
+<!-- Вторая модалка для авторизации -->
+<section class="modal-menu modal-invis" id="modal-login">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Авторизация</label>
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <button class="reg-btn">Войти</button>
+        <p class="login-link" onclick="toggleModal()">Создать аккаунт</p>
+    </form>
+</section>
+
+    <main>
+        <section class="main-page-section">
+            <div class="left-main">
+                <h1 class="main-title">Frontend</h1>
+                <p class="main-descr">Инженеры фронтенда тесно сотрудничают с дизайнерами, чтобы сделать веб-сайты красивыми, функциональными и быстрыми.</p>
+                <p class="main-descr2">Включает HTML, CSS, JavaScript, фронтенд, веб-приложения, React и многое другое.</p>
+            </div>
+            <img src="img/фффффффф 1.png" alt="" class="right-main-img">
+        </section>
+        <section class="courses-content">
+            <h2>Заключение</h2>
+<p>Создание собственного сайта — это отличный способ продемонстрировать свои знания и умения в веб-разработке. Он может служить как личное портфолио, блог, онлайн-резюме или даже полноценное веб-приложение.
+</p>
+<a href="https://www.figma.com/design/a3QZIdDIAxYbsqM5Fiaca2/%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2?node-id=10-29&t=GpYAVQNlcANBsW61-0">https://www.figma.com/design/a3QZIdDIAxYbsqM5Fiaca2/%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2?node-id=10-29&t=GpYAVQNlcANBsW61-0</a>
+    </section>
+    </main>
+    <footer>
+        <h1 class="footer-logo">VertumIT</h1>
+        <button class="footer-sup">Поддержать нас</button>
+        <p class="soc-title">Подпишитесь на нас</p>
+        <div class="soc-imgs">
+            <img src="img/tg.png" alt="" class="soc">
+            <img src="img/vk.png" alt="" class="soc">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
