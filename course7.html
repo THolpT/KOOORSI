@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>VertumIT</title>
+</head>
+<body id="blur">
+    <header>
+        <div class="logo">VertumIT</div>
+        <button class="burger-menu" onclick="toggleMenu()">&#9776;</button>
+        <ul class="nav-menu">
+            <li class="nav-li"><a href="index.html">Главная</a></li>
+            <li class="nav-li"><a href="courses.html">Курсы</a></li>
+            <button onclick="modalActivate()">Регистрация</button>
+        </ul>
+    </header>
+<!-- Первая модалка для регистрации -->
+<section class="modal-menu modal-invis" id="modal-reg">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Регистрация</label>
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <input type="tel" placeholder="Телефон">
+        <button class="reg-btn">Регистрация</button>
+        <p class="login-link" onclick="toggleModal()">Уже имеете аккаунт?</p>
+    </form>
+</section>
+
+<!-- Вторая модалка для авторизации -->
+<section class="modal-menu modal-invis" id="modal-login">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Авторизация</label>
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <button class="reg-btn">Войти</button>
+        <p class="login-link" onclick="toggleModal()">Создать аккаунт</p>
+    </form>
+</section>
+
+    <main>
+        <section class="main-page-section">
+            <div class="left-main">
+                <h1 class="main-title">Frontend</h1>
+                <p class="main-descr">Инженеры фронтенда тесно сотрудничают с дизайнерами, чтобы сделать веб-сайты красивыми, функциональными и быстрыми.</p>
+                <p class="main-descr2">Включает HTML, CSS, JavaScript, фронтенд, веб-приложения, React и многое другое.</p>
+            </div>
+            <img src="img/фффффффф 1.png" alt="" class="right-main-img">
+        </section>
+        <section class="courses-content">
+            <h1>Введение в современные инструменты</h1>
+            <p>Современные инструменты играют ключевую роль в разработке программного обеспечения, упрощая управление кодом, зависимостями и сотрудничество в командах. В этом разделе мы рассмотрим системы контроля версий и пакетные менеджеры.</p>
+        
+            <h2>Системы контроля версий</h2>
+            <p>Системы контроля версий (VCS) помогают разработчикам отслеживать изменения в коде, управлять версиями и совместно работать над проектами.</p>
+        
+            <h3>Git</h3>
+            <p>Это наиболее популярная распределенная система контроля версий, которая позволяет отслеживать изменения в файлах и координировать работу над проектом.</p>
+        
+            <p><strong>Основные команды Git:</strong></p>
+            <pre>
+git init      # Инициализация нового репозитория
+git clone     # Клонирование существующего репозитория
+git add       # Добавление изменений в индекс
+git commit    # Сохранение изменений в локальном репозитории
+git push      # Отправка изменений в удаленный репозиторий
+git pull      # Получение изменений из удаленного репозитория
+            </pre>
+        
+            <h3>GitHub</h3>
+            <p>Веб-сервис для хостинга Git-репозиториев, который предоставляет дополнительные функции, такие как управление проектами, обсуждения и интеграции.</p>
+        
+            <h4>Работа с репозиториями на GitHub:</h4>
+            <ul>
+                <li><strong>Создание репозитория:</strong> Можно создать новый репозиторий на GitHub и клонировать его локально.</li>
+                <li><strong>Pull Requests:</strong> Механизм для предложения изменений и их обсуждения перед слиянием в основную ветку.</li>
+                <li><strong>Issues:</strong> Инструмент для отслеживания задач и багов.</li>
+            </ul>
+        
+            <h2>Пакетные менеджеры</h2>
+            <p>Пакетные менеджеры упрощают управление зависимостями проекта, установку и обновление библиотек.</p>
+        
+            <h3>npm (Node Package Manager)</h3>
+            <p>По умолчанию используется с Node.js для управления JavaScript-пакетами.</p>
+        
+            <p><strong>Основные команды npm:</strong></p>
+            <pre>
+npm init              # Создание файла package.json для управления проектом
+npm install <package> # Установка пакета
+npm install          # Установка всех зависимостей, указанных в package.json
+npm update           # Обновление пакетов до последних версий
+            </pre>
+        
+            <h3>Yarn</h3>
+            <p>Альтернатива npm, разработанная Facebook. Обеспечивает более быструю и надежную установку пакетов.</p>
+        
+            <p><strong>Основные команды Yarn:</strong></p>
+            <pre>
+yarn init          # Создание файла package.json
+yarn add "package" # Установка пакета
+yarn install       # Установка всех зависимостей
+yarn upgrade       # Обновление пакетов
+            </pre>
+        
+            <h2>Установка и управление пакетами</h2>
+            <p>Пакетные менеджеры позволяют легко устанавливать и управлять библиотеками, необходимыми для вашего проекта.</p>
+        
+            <h3>Установка пакетов</h3>
+            <ul>
+                <li><strong>Локальная установка:</strong> Пакет устанавливается только для текущего проекта.</li>
+                <li><strong>Глобальная установка:</strong> Пакет устанавливается для всех проектов на компьютере.</li>
+            </ul>
+        
+            <h3>Управление зависимостями</h3>
+            <ul>
+                <li><code>package.json</code>: Файл, который содержит метаданные о проекте и список зависимостей.</li>
+                <li><code>package-lock.json</code> или <code>yarn.lock</code>: Файл, который фиксирует точные версии установленных пакетов для обеспечения консистентности.</li>
+            </ul>
+        
+            <p>Эти инструменты значительно упрощают процесс разработки, обеспечивая эффективное управление кодом и зависимостями, а также улучшая сотрудничество в командах.</p>
+        
+            <h2>Задание</h2>
+            <p>Создайте аккаунт на <a href="https://github.com/" target="_blank">GitHub</a> и загрузите туда полученный сайт с прошлого урока. После этого попробуйте клонировать его в новую папку на вашем рабочем столе, используя команды Git.</p>
+        
+    </section>
+    <section class="btn-course-choose">
+        <a href="course6.html"><button>Назад</button></a>
+        <a href="course8.html"><button>Дальше</button></a>
+    </section>
+    </main>
+    <footer>
+        <h1 class="footer-logo">VertumIT</h1>
+        <button class="footer-sup"><a href="https://boosty.to/antonnnn">Поддержать нас</a></button>
+        <p class="soc-title">Подпишитесь на нас</p>
+        <div class="soc-imgs">
+            <a href="https://web.telegram.org/"><img src="img/tg.png" alt="" class="soc"></a>
+            <a href="https://vk.com/"><img src="img/vk.png" alt="" class="soc"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>VertumIT</title>
+</head>
+<body id="blur">
+    <header>
+        <div class="logo">VertumIT</div>
+        <button class="burger-menu" onclick="toggleMenu()">&#9776;</button>
+        <ul class="nav-menu">
+            <li class="nav-li"><a href="index.html">Главная</a></li>
+            <li class="nav-li"><a href="courses.html">Курсы</a></li>
+            <button onclick="modalActivate()">Регистрация</button>
+        </ul>
+    </header>
+<!-- Первая модалка для регистрации -->
+<section class="modal-menu modal-invis" id="modal-reg">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Регистрация</label>
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <input type="tel" placeholder="Телефон">
+        <button class="reg-btn">Регистрация</button>
+        <p class="login-link" onclick="toggleModal()">Уже имеете аккаунт?</p>
+    </form>
+</section>
+
+<!-- Вторая модалка для авторизации -->
+<section class="modal-menu modal-invis" id="modal-login">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Авторизация</label>
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <button class="reg-btn">Войти</button>
+        <p class="login-link" onclick="toggleModal()">Создать аккаунт</p>
+    </form>
+</section>
+
+    <main>
+        <section class="main-page-section">
+            <div class="left-main">
+                <h1 class="main-title">Frontend</h1>
+                <p class="main-descr">Инженеры фронтенда тесно сотрудничают с дизайнерами, чтобы сделать веб-сайты красивыми, функциональными и быстрыми.</p>
+                <p class="main-descr2">Включает HTML, CSS, JavaScript, фронтенд, веб-приложения, React и многое другое.</p>
+            </div>
+            <img src="img/фффффффф 1.png" alt="" class="right-main-img">
+        </section>
+        <section class="courses-content">
+            <h1>JavaScript для начинающих</h1>
+    <p><strong>JavaScript</strong> — это язык программирования, который используется для добавления интерактивности на веб-страницы. Он работает на клиентской стороне в браузере и позволяет создавать динамические веб-приложения.</p>
+
+    <h2>Основы JavaScript</h2>
+    <p>JavaScript является интерпретируемым языком программирования, который поддерживается всеми современными браузерами. Он позволяет манипулировать HTML и CSS, обрабатывать события, отправлять запросы к серверу и многое другое.</p>
+
+    <h2>Введение в язык программирования</h2>
+    <p>JavaScript был создан для работы в браузере, но также может использоваться на сервере (например, с помощью Node.js). Он поддерживает парадигмы объектно-ориентированного, функционального и императивного программирования.</p>
+
+    <h2>Переменные, типы данных, операторы</h2>
+    <h3>Переменные</h3>
+    <p>Используются для хранения данных. Объявляются с помощью ключевых слов <code>let</code>, <code>const</code> или <code>var</code>.</p>
+
+    <pre>
+let name = "John";
+const age = 30;
+    </pre>
+
+    <h3>Типы данных</h3>
+    <ul>
+        <li><strong>Примитивные типы:</strong> <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, <code>bigint</code>.</li>
+        <li><strong>Объекты:</strong> Комплексные структуры данных, включая массивы и функции.</li>
+    </ul>
+
+    <h3>Операторы</h3>
+    <ul>
+        <li><strong>Арифметические:</strong> <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>.</li>
+        <li><strong>Операторы сравнения:</strong> <code>==</code>, <code>===</code>, <code>!=</code>, <code>!==</code>, <code>></code>, <code><</code>.</li>
+        <li><strong>Логические:</strong> <code>&&</code>, <code>||</code>, <code>!</code>.</li>
+    </ul>
+
+    <h2>Управление потоком</h2>
+    <p>Управление потоком позволяет контролировать выполнение кода в зависимости от условий.</p>
+
+    <h3>Условные операторы</h3>
+    <p><strong>if, else if, else:</strong> Выполняют код, если условие истинно.</p>
+
+    <pre>
+let hour = 10;
+if (hour < 12) {
+    console.log("Good morning!");
+} else {
+    console.log("Good day!");
+}
+    </pre>
+
+    <p><strong>switch:</strong> Выполняет код в зависимости от значения переменной.</p>
+
+    <pre>
+let day = 3;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    default:
+        console.log("Other day");
+}
+    </pre>
+
+    <h3>Циклы</h3>
+    <p><strong>for:</strong> Цикл с заданным количеством итераций.</p>
+
+    <pre>
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+    </pre>
+
+    <p><strong>while:</strong> Цикл, который выполняется, пока условие истинно.</p>
+
+    <pre>
+let i = 0;
+while (i < 5) {
+    console.log(i);
+    i++;
+}
+    </pre>
+
+    <h2>Функции и события</h2>
+    <h3>Функции</h3>
+    <p>Блоки кода, которые можно вызывать многократно.</p>
+
+    <pre>
+function greet(name) {
+    return "Hello, " + name;
+}
+console.log(greet("Alice"));
+    </pre>
+
+    <h3>Обработка событий</h3>
+    <p>JavaScript позволяет реагировать на события, такие как клики, наведение курсора и другие.</p>
+
+    <pre>
+document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button clicked!");
+});
+    </pre>
+
+    <h2>Задание</h2>
+    <p>Опробуйте полученные знания, создайте файл <code>script.js</code> и попробуйте использовать в нем <code>let</code>, <code>const</code>, <code>if</code>, <code>else</code>, <code>for</code>.</p>
+    <p>Для запуска <code>script.js</code> в терминале используйте команду:</p>
+
+    <pre>
+node "script.js"
+    </pre>
+
+    </section>
+    <section class="btn-course-choose">
+        <a href="course4.html"><button>Назад</button></a>
+        <a href="course6.html"><button>Дальше</button></a>
+    </section>
+    </main>
+    <footer>
+        <h1 class="footer-logo">VertumIT</h1>
+        <button class="footer-sup"><a href="https://boosty.to/antonnnn">Поддержать нас</a></button>
+        <p class="soc-title">Подпишитесь на нас</p>
+        <div class="soc-imgs">
+            <a href="https://web.telegram.org/"><img src="img/tg.png" alt="" class="soc"></a>
+            <a href="https://vk.com/"><img src="img/vk.png" alt="" class="soc"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

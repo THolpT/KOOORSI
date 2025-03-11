@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>VertumIT</title>
+</head>
+<body id="blur">
+    <header>
+        <div class="logo">VertumIT</div>
+        <button class="burger-menu" onclick="toggleMenu()">&#9776;</button>
+        <ul class="nav-menu">
+            <li class="nav-li"><a href="index.html">Главная</a></li>
+            <li class="nav-li"><a href="courses.html">Курсы</a></li>
+            <button onclick="modalActivate()">Регистрация</button>
+        </ul>
+    </header>
+<!-- Первая модалка для регистрации -->
+<section class="modal-menu modal-invis" id="modal-reg">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Регистрация</label>
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <input type="tel" placeholder="Телефон">
+        <button class="reg-btn">Регистрация</button>
+        <p class="login-link" onclick="toggleModal()">Уже имеете аккаунт?</p>
+    </form>
+</section>
+
+<!-- Вторая модалка для авторизации -->
+<section class="modal-menu modal-invis" id="modal-login">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Авторизация</label>
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <button class="reg-btn">Войти</button>
+        <p class="login-link" onclick="toggleModal()">Создать аккаунт</p>
+    </form>
+</section>
+
+    <main>
+        <section class="main-page-section">
+            <div class="left-main">
+                <h1 class="main-title">Frontend</h1>
+                <p class="main-descr">Инженеры фронтенда тесно сотрудничают с дизайнерами, чтобы сделать веб-сайты красивыми, функциональными и быстрыми.</p>
+                <p class="main-descr2">Включает HTML, CSS, JavaScript, фронтенд, веб-приложения, React и многое другое.</p>
+            </div>
+            <img src="img/фффффффф 1.png" alt="" class="right-main-img">
+        </section>
+        <section class="courses-content">
+            <h1>Основы CSS</h1>
+            <p><strong>CSS (Cascading Style Sheets)</strong> — это язык стилей, используемый для описания внешнего вида HTML-документа. Он позволяет отделить содержание от представления, делая веб-страницы более управляемыми и адаптивными.</p>
+        
+            <h2>Введение в CSS</h2>
+            <p>CSS используется для управления макетом, цветами, шрифтами и другими аспектами представления HTML-элементов. Он позволяет применять стили к одному или нескольким элементам, используя селекторы.</p>
+        
+            <h2>Подключение CSS к HTML</h2>
+            <p>Существует несколько способов подключения CSS к HTML:</p>
+        
+            <ul>
+                <li><strong>Встроенные стили:</strong> CSS внутри тега <code>&lt;style&gt;</code> в секции <code>&lt;head&gt;</code>.</li>
+            </ul>
+        
+            <pre>
+&lt;head&gt;
+    &lt;style&gt;
+        body {
+            background-color: lightblue;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+            </pre>
+        
+            <ul>
+                <li><strong>Внешние стили:</strong> CSS в отдельном файле, подключаемом через тег <code>&lt;link&gt;</code>.</li>
+            </ul>
+        
+            <pre>&lt;head&gt;    &lt;link rel="stylesheet" href="styles.css"&gt;&lt;/head&gt;
+            </pre>
+        
+            <
+                <li><strong>Инлайн-стили:</strong> CSS непосредственно в HTML-теге с использованием атрибута <code>style</code>.</li>
+            </ul>
+        
+            <pre>
+&lt;p style="color: red;"&gt;Текст красного цвета.&lt;/p&gt;
+            </pre>
+        
+            <h2>Селекторы и их приоритеты</h2>
+            <p>Селекторы используются для выбора HTML-элементов, к которым будут применены стили.</p>
+        
+            <ul>
+                <li><strong>Типовые селекторы:</strong> Выбирают все элементы данного типа (например, <code>p</code> для всех параграфов).</li>
+                <li><strong>Классовые селекторы:</strong> Выбирают элементы с определенным классом (например, <code>.classname</code>).</li>
+                <li><strong>ID селекторы:</strong> Выбирают элемент с определенным ID (например, <code>#idname</code>).</li>
+                <li><strong>Атрибутные селекторы:</strong> Выбирают элементы с определенным атрибутом (например, <code>[type="text"]</code>).</li>
+            </ul>
+        
+            <h3>Приоритеты селекторов (специфичность):</h3>
+            <ol>
+                <li>Инлайн-стили.</li>
+                <li>ID селекторы.</li>
+                <li>Классовые селекторы.</li>
+                <li>Типовые селекторы.</li>
+            </ol>
+        
+            <h2>Модель коробки и позиционирование</h2>
+            <p>Модель коробки описывает, как элементы отображаются и занимают пространство на странице. Она включает:</p>
+            <ul>
+                <li><strong>Content:</strong> Содержимое элемента.</li>
+                <li><strong>Padding:</strong> Внутренние поля вокруг содержимого.</li>
+                <li><strong>Border:</strong> Граница вокруг полей.</li>
+                <li><strong>Margin:</strong> Внешние отступы вокруг границы.</li>
+            </ul>
+        
+            <h3>Позиционирование элементов</h3>
+            <p>CSS предоставляет несколько способов позиционирования элементов:</p>
+            <ul>
+                <li><code>static</code>: По умолчанию, элемент располагается в потоке документа.</li>
+                <li><code>relative</code>: Элемент смещается относительно своего нормального положения.</li>
+                <li><code>absolute</code>: Элемент позиционируется относительно ближайшего позиционированного предка.</li>
+                <li><code>fixed</code>: Элемент фиксируется относительно окна просмотра.</li>
+                <li><code>sticky</code>: Элемент ведет себя как <code>relative</code> до тех пор, пока не достигнет определенного порога прокрутки, после чего становится <code>fixed</code>.</li>
+            </ul>
+        
+            <h2>Гибкий дизайн и медиазапросы</h2>
+            <p>Гибкий дизайн позволяет веб-страницам адаптироваться к различным размерам экранов и устройствам.</p>
+        
+            <h3>Медиазапросы</h3>
+            <p>Используются для применения стилей в зависимости от характеристик устройства (например, ширина экрана).</p>
+        
+            <pre@media (max-width: 600px)     body         background-color: lightcoral    }
+            </pre>
+        
+            <h2>Основы адаптивного дизайна</h2>
+            <p>Адаптивный дизайн обеспечивает оптимальное отображение веб-страниц на всех устройствах (от мобильных до настольных).</p>
+        
+            <h3>Основные элементы адаптивного дизайна:</h3>
+            <ul>
+                <li><strong>Гибкие сетки:</strong> Использование процентов и относительных единиц для размеров.</li>
+                <li><strong>Гибкие изображения:</strong> Использование <code>max-width: 100%</code> для изображений.</li>
+                <li><strong>Медиазапросы:</strong> Применение различных стилей для разных размеров экранов.</li>
+            </ul>
+        
+            <h2>Дополнительные элементы CSS</h2>
+            <ul>
+                <li><strong>Цвет (color):</strong> <code>p { color: blue; }</code></li>
+                <li><strong>Флексбокс (flex):</strong></li>
+            </ul>
+        
+            <pre>.container {    display: flex;    justify-content: space-between;    align-items: center;}
+            </pre>
+        
+            <ul>
+                <li><strong>Гриды (grid):</strong></li>
+            </ul>
+        
+            <pre>.container {    display: grid;    grid-template-columns: repeat(3, 1fr);    gap: 10px;}
+            </pre>
+        
+            <ul>
+                <li><strong>Тени (box-shadow):</strong></li>
+            </ul>
+        
+            <pre>
+.box {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+            </pre>
+        
+            <ul>
+                <li><strong>Градиенты (background):</strong></li>
+            </ul>
+        
+            <pre>
+.gradient {
+    background: linear-gradient(to right, red, yellow);
+}
+            </pre>
+        
+            <h2>Задание</h2>
+            <p>Опробуйте полученные знания по CSS: создайте файл <code>style.css</code> и подключите его в файле HTML с помощью тега <code>link</code> в секции <code>head</code>. Затем создайте элемент в HTML и добавьте ему класс, применив к нему стили по вашему выбору.</p>
+        
+    </section>
+    <section class="btn-course-choose">
+        <a href="course3.html"><button>Назад</button></a>
+        <a href="course5.html"><button>Дальше</button></a>
+    </section>
+    </main>
+    <footer>
+        <h1 class="footer-logo">VertumIT</h1>
+        <button class="footer-sup"><a href="https://boosty.to/antonnnn">Поддержать нас</a></button>
+        <p class="soc-title">Подпишитесь на нас</p>
+        <div class="soc-imgs">
+            <a href="https://web.telegram.org/"><img src="img/tg.png" alt="" class="soc"></a>
+            <a href="https://vk.com/"><img src="img/vk.png" alt="" class="soc"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

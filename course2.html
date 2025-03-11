@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>VertumIT</title>
+</head>
+<body id="blur">
+    <header>
+        <div class="logo">VertumIT</div>
+        <button class="burger-menu" onclick="toggleMenu()">&#9776;</button>
+        <ul class="nav-menu">
+            <li class="nav-li"><a href="index.html">Главная</a></li>
+            <li class="nav-li"><a href="courses.html">Курсы</a></li>
+            <button onclick="modalActivate()">Регистрация</button>
+        </ul>
+    </header>
+<!-- Первая модалка для регистрации -->
+<section class="modal-menu modal-invis" id="modal-reg">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Регистрация</label>
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <input type="tel" placeholder="Телефон">
+        <button class="reg-btn">Регистрация</button>
+        <p class="login-link" onclick="toggleModal()">Уже имеете аккаунт?</p>
+    </form>
+</section>
+
+<!-- Вторая модалка для авторизации -->
+<section class="modal-menu modal-invis" id="modal-login">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Авторизация</label>
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <button class="reg-btn">Войти</button>
+        <p class="login-link" onclick="toggleModal()">Создать аккаунт</p>
+    </form>
+</section>
+
+    <main>
+        <section class="main-page-section">
+            <div class="left-main">
+                <h1 class="main-title">Frontend</h1>
+                <p class="main-descr">Инженеры фронтенда тесно сотрудничают с дизайнерами, чтобы сделать веб-сайты красивыми, функциональными и быстрыми.</p>
+                <p class="main-descr2">Включает HTML, CSS, JavaScript, фронтенд, веб-приложения, React и многое другое.</p>
+            </div>
+            <img src="img/фффффффф 1.png" alt="" class="right-main-img">
+        </section>
+        <section class="courses-content">
+            <h1>Введение в Visual Studio Code</h1>
+
+    <h2>Что такое Visual Studio Code?</h2>
+    <p><strong>Visual Studio Code (VS Code)</strong> — это мощный, бесплатный редактор кода, разработанный Microsoft. Он поддерживает множество языков программирования и обладает широкими возможностями настройки и расширения функциональности.</p>
+    <p>VS Code популярен среди разработчиков благодаря:</p>
+    <ul>
+        <li>Гибкости и производительности.</li>
+        <li>Богатому набору встроенных инструментов.</li>
+        <li>Большому количеству расширений.</li>
+    </ul>
+
+    <h2>Установка и первоначальная настройка</h2>
+    <p>Чтобы начать работу с VS Code, выполните следующие шаги:</p>
+    <ol>
+        <li>Скачайте установочный файл с <a href="https://code.visualstudio.com/" target="_blank" class="links">официального сайта</a>.</li>
+        <li>Установите редактор, следуя инструкциям.</li>
+        <li>Настройте интерфейс: выберите тему оформления, шрифты и параметры отображения.</li>
+    </ol>
+
+    <h2>Основные функции VS Code</h2>
+    <p>Редактор имеет удобный интерфейс, включающий:</p>
+    <ul>
+        <li>Редактор кода с подсветкой синтаксиса.</li>
+        <li>Боковую панель для навигации по файлам и папкам.</li>
+        <li>Встроенный терминал для выполнения команд.</li>
+        <li>Функцию <strong>IntelliSense</strong> для автодополнения кода.</li>
+    </ul>
+
+    <div class="highlight">
+        <h3>Отладка кода</h3>
+        <p>VS Code поддерживает встроенные инструменты отладки, позволяя:</p>
+        <ul>
+            <li>Ставить точки останова.</li>
+            <li>Отслеживать выполнение кода.</li>
+            <li>Подключать тестовые фреймворки для автоматического тестирования.</li>
+        </ul>
+    </div>
+
+    <h2>Внутренние расширения VS Code</h2>
+    <p>Одной из главных особенностей редактора являются расширения. Самые популярные:</p>
+    <ul>
+        <li><strong>Python:</strong> Поддержка языка, линтеры и отладчики.</li>
+        <li><strong>ESLint и Prettier:</strong> Форматирование и проверка кода JavaScript.</li>
+        <li><strong>Live Server:</strong> Запуск локального сервера для тестирования веб-приложений.</li>
+        <li><strong>GitLens:</strong> Улучшенная работа с системой контроля версий Git.</li>
+    </ul>
+
+    <h2>Установка и управление расширениями</h2>
+    <p>Для установки расширений:</p>
+    <ol>
+        <li>Откройте вкладку <code>Extensions</code> (или нажмите <code>Ctrl + Shift + X</code>).</li>
+        <li>Введите название расширения в поиск.</li>
+        <li>Нажмите "Установить" и дождитесь завершения установки.</li>
+    </ol>
+
+    <h2>Практические советы</h2>
+    <ul>
+        <li>Организуйте проекты в <strong>рабочие пространства</strong> для удобной работы.</li>
+        <li>Используйте <strong>сниппеты</strong> — заранее созданные фрагменты кода для ускорения разработки.</li>
+        <li>Настройте <strong>горячие клавиши</strong> для быстрого доступа к командам.</li>
+        <li>Работайте с <strong>Git</strong> прямо в редакторе для контроля версий.</li>
+    </ul>
+
+    <h2>Задание</h2>
+    <p><strong>Установите VS Code и настройте необходимые расширения.</strong></p>
+    <ul>
+        <li>Установите <strong>Live Server</strong> для тестирования веб-приложений.</li>
+        <li>Добавьте другие полезные расширения в зависимости от вашего стека технологий.</li>
+    </ul>
+    </section>
+    <section class="btn-course-choose">
+        <a href="course1.html"><button>Назад</button></a>
+        <a href="course3.html"><button>Дальше</button></a>
+    </section>
+    </main>
+    <footer>
+        <h1 class="footer-logo">VertumIT</h1>
+        <button class="footer-sup"><a href="https://boosty.to/antonnnn">Поддержать нас</a></button>
+        <p class="soc-title">Подпишитесь на нас</p>
+        <div class="soc-imgs">
+            <a href="https://web.telegram.org/"><img src="img/tg.png" alt="" class="soc"></a>
+            <a href="https://vk.com/"><img src="img/vk.png" alt="" class="soc"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

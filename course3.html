@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>VertumIT</title>
+</head>
+<body id="blur">
+    <header>
+        <div class="logo">VertumIT</div>
+        <button class="burger-menu" onclick="toggleMenu()">&#9776;</button>
+        <ul class="nav-menu">
+            <li class="nav-li"><a href="index.html">Главная</a></li>
+            <li class="nav-li"><a href="courses.html">Курсы</a></li>
+            <button onclick="modalActivate()">Регистрация</button>
+        </ul>
+    </header>
+<!-- Первая модалка для регистрации -->
+<section class="modal-menu modal-invis" id="modal-reg">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Регистрация</label>
+        <input type="email" placeholder="email">
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <input type="tel" placeholder="Телефон">
+        <button class="reg-btn">Регистрация</button>
+        <p class="login-link" onclick="toggleModal()">Уже имеете аккаунт?</p>
+    </form>
+</section>
+
+<!-- Вторая модалка для авторизации -->
+<section class="modal-menu modal-invis" id="modal-login">
+    <p class="krest" onclick="modalActivate()">&#x2715;</p>
+    <img src="img/фффффффф 1.png" alt="" class="modal-img">
+    <form action="" class="modal-form">
+        <label for="" class="reg-title">Авторизация</label>
+        <input type="text" placeholder="Логин">
+        <input type="text" placeholder="Пароль">
+        <button class="reg-btn">Войти</button>
+        <p class="login-link" onclick="toggleModal()">Создать аккаунт</p>
+    </form>
+</section>
+
+    <main>
+        <section class="main-page-section">
+            <div class="left-main">
+                <h1 class="main-title">Frontend</h1>
+                <p class="main-descr">Инженеры фронтенда тесно сотрудничают с дизайнерами, чтобы сделать веб-сайты красивыми, функциональными и быстрыми.</p>
+                <p class="main-descr2">Включает HTML, CSS, JavaScript, фронтенд, веб-приложения, React и многое другое.</p>
+            </div>
+            <img src="img/фффффффф 1.png" alt="" class="right-main-img">
+        </section>
+        <section class="courses-content">
+            <h1>Основы HTML</h1>
+
+            <h2>Что такое HTML?</h2>
+            <p>HTML (HyperText Markup Language) — это стандартный язык разметки для создания веб-страниц. Он используется для определения структуры и содержания веб-документа.</p>
+        
+            <h2>Структура HTML-документа</h2>
+            <p>Основная структура HTML-документа включает в себя следующие элементы:</p>
+        
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Заголовок страницы&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Заголовок&lt;/h1&gt;
+    &lt;p&gt;Параграф текста.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        
+            <p>Данную структуру можно вызвать с помощью "Сниппета". Просто введите <strong>!</strong> в VS Code и нажмите "Enter" или "Tab" на клавиатуре.</p>
+        
+            <h3>Описание элементов:</h3>
+            <ul>
+                <li><strong>&lt;!DOCTYPE html&gt;</strong>: Декларация типа документа, указывающая, что это HTML5.</li>
+                <li><strong>&lt;html&gt;</strong>: Корневой элемент HTML-документа.</li>
+                <li><strong>&lt;head&gt;</strong>: Содержит метаинформацию о документе (кодировка, заголовок).</li>
+                <li><strong>&lt;body&gt;</strong>: Содержит основное содержимое страницы.</li>
+            </ul>
+        
+            <h2>Теги и элементы</h2>
+            <p>HTML состоит из тегов, которые обрамляют содержимое и придают ему смысл.</p>
+        
+            <h3>Типы тегов:</h3>
+            <ul>
+                <li><strong>Парные:</strong> Например, <code>&lt;p&gt;...&lt;/p&gt;</code> для параграфа.</li>
+                <li><strong>Одиночные:</strong> Например, <code>&lt;img&gt;</code> для изображений.</li>
+            </ul>
+        
+            <p>Парные теги всегда должны закрываться, иначе это может привести к ошибкам в коде.</p>
+        
+            <h3>Примеры HTML-тегов:</h3>
+            <ul>
+                <li><code>&lt;h1&gt;...&lt;/h1&gt;</code> — заголовки от первого до шестого уровня.</li>
+                <li><code>&lt;p&gt;...&lt;/p&gt;</code> — параграф текста.</li>
+                <li><code>&lt;a href="https://example.com"&gt;Ссылка&lt;/a&gt;</code> — гиперссылка.</li>
+                <li><code>&lt;img src="image.jpg" alt="Описание"&gt;</code> — изображение.</li>
+            </ul>
+        
+            <h2>Атрибуты HTML</h2>
+            <p>Атрибуты предоставляют дополнительную информацию об элементах. Они записываются внутри открывающего тега.</p>
+        
+            <h3>Примеры атрибутов:</h3>
+            <ul>
+                <li><strong>href</strong> в теге <code>&lt;a&gt;</code> — указывает адрес ссылки.</li>
+                <li><strong>src</strong> в теге <code>&lt;img&gt;</code> — указывает путь к изображению.</li>
+                <li><strong>class</strong> и <strong>id</strong> — используются для стилизации и работы с JavaScript.</li>
+            </ul>
+        
+            <h2>Семантические теги</h2>
+            <p>Семантические теги помогают определить смысл элементов, улучшая доступность и SEO.</p>
+        
+            <h3>Примеры семантических тегов:</h3>
+            <ul>
+                <li><code>&lt;header&gt;</code> — шапка страницы.</li>
+                <li><code>&lt;footer&gt;</code> — подвал страницы.</li>
+                <li><code>&lt;article&gt;</code> — независимый контент (например, блог-пост).</li>
+                <li><code>&lt;section&gt;</code> — раздел документа.</li>
+                <li><code>&lt;nav&gt;</code> — навигационное меню.</li>
+            </ul>
+        
+            <h2>Формы и ввод данных</h2>
+            <p>HTML-формы позволяют пользователям вводить данные и отправлять их на сервер.</p>
+        
+            <h3>Пример формы:</h3>
+        
+            <pre>
+&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Имя:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+        
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    
+    &lt;input type="submit" value="Отправить"&gt;
+&lt;/form&gt;
+            </pre>
+        
+            <h3>Типы полей ввода:</h3>
+            <ul>
+                <li><code>&lt;input type="text"&gt;</code> — текстовое поле.</li>
+                <li><code>&lt;input type="email"&gt;</code> — поле для email.</li>
+                <li><code>&lt;input type="password"&gt;</code> — поле для пароля.</li>
+                <li><code>&lt;textarea&gt;...&lt;/textarea&gt;</code> — многострочное текстовое поле.</li>
+                <li><code>&lt;select&gt;...&lt;/select&gt;</code> — выпадающий список.</li>
+                <li><code>&lt;button&gt;...&lt;/button&gt;</code> — кнопка.</li>
+            </ul>
+        
+            <h2>Задание</h2>
+            <p>Используйте полученные знания по тегам:</p>
+            <ul>
+                <li>Откройте VS Code и создайте новый HTML-файл.</li>
+                <li>Используйте <strong>сниппеты</strong> для ускорения работы (например, введите <code>p</code> и нажмите "Enter" для быстрого создания тега <code>&lt;p&gt;</code>).</li>
+                <li>Попробуйте написать основные теги, не допуская ошибок.</li>
+                <li>Запомните смысл парных тегов и основной структуры HTML.</li>
+            </ul>
+    </section>
+    <section class="btn-course-choose">
+        <a href="course2.html"><button>Назад</button></a>
+        <a href="course4.html"><button>Дальше</button></a>
+    </section>
+    </main>
+    <footer>
+        <h1 class="footer-logo">VertumIT</h1>
+        <button class="footer-sup"><a href="https://boosty.to/antonnnn">Поддержать нас</a></button>
+        <p class="soc-title">Подпишитесь на нас</p>
+        <div class="soc-imgs">
+            <a href="https://web.telegram.org/"><img src="img/tg.png" alt="" class="soc"></a>
+            <a href="https://vk.com/"><img src="img/vk.png" alt="" class="soc"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
